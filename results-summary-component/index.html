@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Results Summary Component</title>
+</head>
+<body>
+    <div id="container">
+        <div id="shadow-container">
+            <div id="result-box">
+                <p class="heading">Your Result</p>
+                <p id="circle"><span id="average-score" class="white-text">76</span><br>of 100</p>
+                <p class="white-text">Great</p>
+                <p class="small-text">You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+
+            <div id="summary-box">
+                <p class="heading float-left">Summary</p>
+                <div class="category-boxes"><img src="icon-reaction.svg" alt=""><p id="reaction">Reaction</p>
+                    <span class="float"><span class="black-text">80</span>/ 100</span></div>
+                <div class="category-boxes"><img src="icon-memory.svg" alt=""><p id="memory">Memory</p>
+                    <span class="float"><span class="black-text">92</span>/ 100</span></div>
+                <div class="category-boxes"><img src="icon-verbal.svg" alt=""><p id="verbal">Verbal</p>
+                    <span class="float"><span class="black-text">61</span>/ 100</span></div>
+                <div class="category-boxes"><img src="icon-visual.svg" alt=""><p id="visual">Visual</p>
+                    <span class="float"><span class="black-text">72</span>/ 100</span></div>
+                <button>Continue</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
