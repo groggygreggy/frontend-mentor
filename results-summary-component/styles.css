@@ -31,7 +31,7 @@ html{
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
-#container{
+body{
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -185,4 +185,11 @@ button{
     cursor: pointer;
     border: none;
     font-weight: 500;
+}
+
+@media (max-width: 500px){
+    #shadow-container{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
 }
