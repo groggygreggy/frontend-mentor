@@ -1,0 +1,156 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+:root{
+    /*primary*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /*neutral*/
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 87.5%;
+    font-family: "Montserrat", "Fraunces", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cream);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 450px;
+    width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.photo{
+    content: url(image-product-desktop.jpg);
+    height: inherit;
+    max-width: 100%;
+}
+
+#info-box{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+}
+
+#info-box > *{
+    margin: 7px;
+    padding: 0;
+    margin-left: 30px;
+}
+
+#flex-row{
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+
+h1{
+    font-family: "Fraunces";
+    width: 80%;
+    font-weight: 700;
+}
+
+h1:first-of-type{
+    color: var(--very-dark-blue);
+}
+
+#flex-row > h1{
+    color: var(--dark-cyan);
+}
+
+p{
+    color: var(--dark-grayish-blue);
+    width: 90%;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+#info-box > p:first-of-type{
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
+
+#flex-row > p{
+    text-decoration: line-through;
+    position: relative;
+    left: 20px;
+}
+
+button{
+    background-color: var(--dark-cyan);
+    height: 50px;
+    width: 250px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+}
+
+i{
+    margin-right: 10px; 
+}
+
+button:hover{
+    background-color: hsl(158, 36%, 20%);
+    cursor: pointer;
+}
+
+@media (max-width: 500px){
+
+    #container{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    #info-box{
+        width: 350px;
+        height: 110%;
+        align-items: center;
+    }
+
+    .photo{
+        content: url(image-product-mobile.jpg);
+        max-height: 100%;
+        width: 350px;
+    }
+
+    #info-box > *{
+        width: 90%;
+        margin: 5px 0 5px 0;
+    }
+
+    #info-box > p:first-of-type{
+        margin-top: 20px;
+    }
+
+    #info-box > h1:first-of-type{
+        font-size: 2.5rem;
+    }
+}
