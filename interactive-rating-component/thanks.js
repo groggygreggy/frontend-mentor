@@ -1,0 +1,1 @@
+document.querySelector('#rating').innerHTML = `You selected ${localStorage.getItem('chosenRating')} out of 5`;
